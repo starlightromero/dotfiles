@@ -1,0 +1,30 @@
+[Default Applications]
+application/octet-stream=mousepad.desktop
+application/pdf=qpdfview.desktop
+application/x-gettext-translation=mousepad.desktop
+application/xml=mousepad.desktop
+application/x-wine-extension-ini=mousepad.desktop
+text/plain=mousepad.desktop
+x-scheme-handler/http=xfce4-web-browser.desktop
+x-scheme-handler/https=xfce4-web-browser.desktop
+x-scheme-handler/chrome=librewolf.desktop
+text/html=librewolf.desktop
+application/x-extension-htm=librewolf.desktop
+application/x-extension-html=librewolf.desktop
+application/x-extension-shtml=librewolf.desktop
+application/xhtml+xml=librewolf.desktop
+application/x-extension-xhtml=librewolf.desktop
+application/x-extension-xht=librewolf.desktop
+
+[Added Associations]
+x-scheme-handler/http=xfce4-web-browser.desktop;
+x-scheme-handler/https=xfce4-web-browser.desktop;
+x-scheme-handler/chrome=librewolf.desktop;
+text/html=librewolf.desktop;
+application/x-extension-htm=librewolf.desktop;
+application/x-extension-html=librewolf.desktop;
+application/x-extension-shtml=librewolf.desktop;
+application/xhtml+xml=librewolf.desktop;
+application/x-extension-xhtml=librewolf.desktop;
+application/x-extension-xht=librewolf.desktop;
+image/png=qimgv.desktop;

@@ -1,0 +1,8 @@
+// For configuration documentation see http://romefrontend.dev/#project-configuration
+name: "lsp-multi-server-sample"
+root: true
+lint: {
+	ignore: [
+		".history"
+		".vscode"
+]

@@ -1,0 +1,92 @@
+[AgentTypeDialog]
+Size=460,320
+
+[Calendar]
+Default Calendar=13
+
+[CollectionPropertiesDialog]
+Size=422,456
+
+[CollectionTreeView]
+Expansion=
+HorizontalScroll=0
+VerticalScroll=0
+
+[General]
+CalendarFilters=
+Current Filter=
+Current View=Agenda
+Range Mode=3
+
+[GlobalCollectionSelection]
+Current=x-1
+Selection=c3,c13,c18,c2
+
+[GlobalCollectionView]
+Expansion=
+HorizontalScroll=0
+VerticalScroll=0
+
+[IncidenceDialog]
+Size=624,541
+
+[Internal Settings]
+DefaultResourceColorSeed=11
+user_email=
+user_name=
+
+[KOrganizer Geometry]
+Separator1=441,838
+Separator2=166,0,217,248
+
+[MainWindow]
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAABQAAAAJ5AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAQAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAAAAAAJABrAG8AcgBnAGEAbgBpAHoAZQByAF8AdABvAG8AbABiAGEAcgEAAANI/////wAAAAAAAAAAAAAAIABzAGMAaABlAGQAdQBsAGUAXwB0AG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAAAAAAcAGYAaQBsAHQAZQByAF8AdABvAG8AbABiAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+eDP1 Window-Maximized 1280x800=true
+eDP1 XPosition 1280x800=0
+eDP1 YPosition 1280x800=65
+
+[Migratekde4]
+Version=1
+
+[Personal Settings]
+Use Control Center Email=false
+
+[Quickview]
+Separator=84,387
+Size=775,600
+
+[ResourceManagement]
+Size=600,400
+
+[Settings]
+DateNavigatorVisible=true
+EventViewerVisible=true
+ResourceViewVisible=true
+TodoViewVisible=false
+
+[Sidebar Todo View]
+ColumnOrder=0,1,2,3,4,5,6,7,8
+ColumnVisibility=true,false,false,false,true,true,false,false,false
+ColumnWidths=84,0,0,0,87,81,0,0,0
+SortAscending=1
+SortColumn=0
+
+[Time & Date]
+WeekStartDay=0
+WorkingHoursEnd=1752,1,1,18,30,0
+
+[Timescale]
+Timescale Timezones=
+
+[TodoTreeViewStateS]
+Current=x-1
+Expansion=
+HorizontalScroll=0
+Selection=
+VerticalScroll=0
+
+[Views]
+Separator AgendaView=109,501
+ShownDatesCount=7

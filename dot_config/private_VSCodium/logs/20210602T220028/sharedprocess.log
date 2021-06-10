@@ -1,0 +1,14 @@
+[2021-06-02 22:00:36.557] [sharedprocess] [error] Failed to install extension: vscodevim.vim Unable to install 'vscodevim.vim' extension because it is not compatible with the current version of VS Code (version 1.56.2).
+[2021-06-02 22:00:43.805] [sharedprocess] [info] Installing extension: ms-vscode.atom-keybindings
+[2021-06-02 22:00:44.196] [sharedprocess] [info] Downloaded extension: ms-vscode.atom-keybindings /home/redpill/.config/VSCodium/CachedExtensionVSIXs/ms-vscode.atom-keybindings-3.0.6
+[2021-06-02 22:00:44.326] [sharedprocess] [info] Extracted extension to /home/redpill/.vscode-oss/extensions/.46291e5c-731a-480a-a84e-d147dcb0203d: ms-vscode.atom-keybindings
+[2021-06-02 22:00:44.336] [sharedprocess] [info] Renamed to /home/redpill/.vscode-oss/extensions/ms-vscode.atom-keybindings-3.0.6
+[2021-06-02 22:00:44.339] [sharedprocess] [info] Installation completed. ms-vscode.atom-keybindings
+[2021-06-02 22:00:44.346] [sharedprocess] [info] Extensions installed successfully: ms-vscode.atom-keybindings
+[2021-06-02 22:01:10.423] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-06-02 22:01:55.726] [sharedprocess] [info] Installing extension: endormi.2077-theme
+[2021-06-02 22:01:56.443] [sharedprocess] [info] Downloaded extension: endormi.2077-theme /home/redpill/.config/VSCodium/CachedExtensionVSIXs/endormi.2077-theme-1.5.2
+[2021-06-02 22:01:56.706] [sharedprocess] [info] Extracted extension to /home/redpill/.vscode-oss/extensions/.51e5e9aa-853a-4278-a2b1-a37281fdfd87: endormi.2077-theme
+[2021-06-02 22:01:56.725] [sharedprocess] [info] Renamed to /home/redpill/.vscode-oss/extensions/endormi.2077-theme-1.5.2
+[2021-06-02 22:01:56.733] [sharedprocess] [info] Installation completed. endormi.2077-theme
+[2021-06-02 22:01:56.748] [sharedprocess] [info] Extensions installed successfully: endormi.2077-theme

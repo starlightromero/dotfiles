@@ -1,0 +1,19 @@
+[2021-06-02 22:38:18.510] [sharedprocess] [info] Installing extension: ms-azuretools.vscode-docker
+[2021-06-02 22:38:19.625] [sharedprocess] [info] Downloaded extension: ms-azuretools.vscode-docker /home/redpill/.config/VSCodium/CachedExtensionVSIXs/ms-azuretools.vscode-docker-1.12.1
+[2021-06-02 22:38:20.528] [sharedprocess] [info] Extracted extension to /home/redpill/.vscode-oss/extensions/.52cbe1f2-dd1b-4ce0-ad87-fe25b5b80828: ms-azuretools.vscode-docker
+[2021-06-02 22:38:20.543] [sharedprocess] [info] Renamed to /home/redpill/.vscode-oss/extensions/ms-azuretools.vscode-docker-1.12.1
+[2021-06-02 22:38:20.549] [sharedprocess] [info] Installation completed. ms-azuretools.vscode-docker
+[2021-06-02 22:38:20.686] [sharedprocess] [info] Extensions installed successfully: ms-azuretools.vscode-docker
+[2021-06-02 22:38:23.325] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-06-02 22:38:27.986] [sharedprocess] [info] Installing extension: exiasr.hadolint
+[2021-06-02 22:38:28.667] [sharedprocess] [info] Downloaded extension: exiasr.hadolint /home/redpill/.config/VSCodium/CachedExtensionVSIXs/exiasr.hadolint-1.0.0
+[2021-06-02 22:38:29.333] [sharedprocess] [info] Extracted extension to /home/redpill/.vscode-oss/extensions/.4f857875-8f81-412c-b532-0577edbe890c: exiasr.hadolint
+[2021-06-02 22:38:29.340] [sharedprocess] [info] Renamed to /home/redpill/.vscode-oss/extensions/exiasr.hadolint-1.0.0
+[2021-06-02 22:38:29.347] [sharedprocess] [info] Installation completed. exiasr.hadolint
+[2021-06-02 22:38:29.351] [sharedprocess] [info] Extensions installed successfully: exiasr.hadolint
+[2021-06-02 22:40:03.859] [sharedprocess] [info] Installing extension: hashicorp.terraform
+[2021-06-02 22:40:19.085] [sharedprocess] [info] Downloaded extension: hashicorp.terraform /home/redpill/.config/VSCodium/CachedExtensionVSIXs/hashicorp.terraform-2.11.0
+[2021-06-02 22:40:20.457] [sharedprocess] [info] Extracted extension to /home/redpill/.vscode-oss/extensions/.e0337272-83e9-4018-b969-e18df82e352c: hashicorp.terraform
+[2021-06-02 22:40:20.464] [sharedprocess] [info] Renamed to /home/redpill/.vscode-oss/extensions/hashicorp.terraform-2.11.0
+[2021-06-02 22:40:20.465] [sharedprocess] [info] Installation completed. hashicorp.terraform
+[2021-06-02 22:40:20.468] [sharedprocess] [info] Extensions installed successfully: hashicorp.terraform

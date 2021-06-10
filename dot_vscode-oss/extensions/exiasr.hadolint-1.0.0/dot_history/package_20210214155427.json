@@ -1,0 +1,102 @@
+{
+  "name": "hadolint",
+  "displayName": "hadolint",
+  "description": "Integrates hadolint, a Dockerfile linter, into VS Code.",
+  "author": "Michael Lin <linzichunzf@hotmail.com>",
+  "license": "MIT",
+  "version": "0.3.0",
+  "publisher": "exiasr",
+  "icon": "hadolint.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ExiaSR/vscode-hadolint"
+  },
+  "engines": {
+    "vscode": "^1.41.0",
+    "node": "^12",
+    "yarn": "^1.12.1"
+  },
+  "categories": [
+    "Linters"
+  ],
+  "keywords": [
+    "docker",
+    "dockerfile"
+  ],
+  "activationEvents": [
+    "onLanguage:dockerfile",
+    "onCommand:hadolint.selectExecutable"
+  ],
+  "main": "./client/out/extension",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "Hadolint - A Dockerfile linter",
+      "properties": {
+        "hadolint.hadolintPath": {
+          "type": "string",
+          "default": "hadolint",
+          "description": "Path to hadolint executable. Windows user, make sure you escape the back slash in the path, e.g, C:\\\\path\\to\\\\hadolint\\\\excutable"
+        },
+        "hadolint.maxNumberOfProblems": {
+          "scope": "resource",
+          "type": "number",
+          "default": 100,
+          "description": "Controls the maximum number of problems produced by the server."
+        },
+        "hadolint.outputLevel": {
+          "type": "string",
+          "enum": [
+            "error",
+            "info",
+            "warning",
+            "hint"
+          ],
+          "default": "warning",
+          "description": "Set the default output level of hadolint message."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "hadolint.selectExecutable",
+        "title": "Select Hadolint Executable",
+        "category": "Hdolint"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "cd client && yarn run update-vscode && cd .. && yarn run compile",
+    "compile": "npm-run-all -l -p compile:*",
+    "compile:client": "tsc -p ./client/tsconfig.json",
+    "compile:server": "tsc -p ./server/tsconfig.json",
+    "watch:client": "tsc -w -p ./client/tsconfig.json",
+    "watch:server": "tsc -w -p ./server/tsconfig.json",
+    "lint": "npm-run-all -l lint:*",
+    "lint:client": "tslint --fix -c tslint.json -p client",
+    "lint:server": "tslint --fix -c tslint.json -p server",
+    "postinstall": "cd client && yarn install && cd ../server && yarn install && cd ..",
+    "commit": "git-cz",
+    "vsce": "vsce",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.1",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "12.12.19",
+    "@types/which": "^1.3.2",
+    "commitizen": "^3.0.5",
+    "conventional-changelog": "^3.0.5",
+    "cz-conventional-changelog": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "standard-version": "^4.4.0",
+    "tslint": "^5.11.0",
+    "typescript": "^4.1.5",
+    "vsce": "^1.53.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

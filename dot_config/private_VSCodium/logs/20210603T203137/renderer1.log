@@ -1,0 +1,25 @@
+[2021-06-03 20:31:55.288] [renderer1] [error] Cannot read property 'children' of undefined: TypeError: Cannot read property 'children' of undefined
+    at n.get children [as children] (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:1937:6236)
+    at h (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:1937:7631)
+    at Yt.refreshTOCTree (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2188:106359)
+    at Yt.triggerSearch (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2188:108229)
+    at Yt.onSearchInputChanged (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2188:106782)
+    at file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2188:93111
+    at l.fire (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:60:1836)
+    at file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2098:14638
+    at file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:580:14170
+    at l.fire (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:60:1836)
+    at X.endDeferredEmit (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:589:30323)
+    at W.pushEditOperations (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:587:925)
+    at p.executeEdits (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:617:479)
+    at file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:618:3260
+    at i._withViewEventsCollector (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:618:5338)
+    at i._executeCursorEdit (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:618:3172)
+    at i.executeEdits (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:618:3225)
+    at hn.executeEdits (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:654:10787)
+    at b.setValue (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2098:15491)
+    at Yt._setOptions (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2188:89437)
+    at Yt.setInput (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2188:88691)
+    at async l.doSetInput (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:1798:10549)
+    at async l.openEditor (file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:1798:9103)
+    at async file:///usr/share/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2452:15922

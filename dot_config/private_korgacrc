@@ -1,0 +1,15 @@
+[Alarms]
+CalendarsLastChecked=2021,6,9,10,15,51.575
+
+[General]
+Autostart=true
+DefaultSuspendUnit=0
+DefaultSuspendValue=5
+Enabled=true
+Position=320,160
+Reminders=1
+Size=640,480
+
+[Incidence-1]
+AkonadiUrl=akonadi:?item=1
+RemindAt=2021,6,9,10,15,51.575

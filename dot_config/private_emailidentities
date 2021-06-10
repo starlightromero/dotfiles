@@ -1,0 +1,12 @@
+[General]
+Default Identity=4118133107
+
+[Identity #0]
+Default Domain=redpill
+Disable Fcc=false
+Identity=redpill
+Image Location=
+Inline Signature=
+Name=redpill
+Signature Enabled=false
+uoid=4118133107

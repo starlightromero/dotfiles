@@ -1,0 +1,3 @@
+[hadolint(125115) file:///home/redpill/MakeSchool/StockStalker/nginx] Started and initialize received
+[hadolint(125115) file:///home/redpill/MakeSchool/StockStalker/nginx] Document opened: file:///home/redpill/MakeSchool/StockStalker/nginx/Dockerfile
+[hadolint(125115) file:///home/redpill/MakeSchool/StockStalker/nginx] Current settings: {"hadolintPath":"hadolint","maxNumberOfProblems":100,"outputLevel":"warning"}

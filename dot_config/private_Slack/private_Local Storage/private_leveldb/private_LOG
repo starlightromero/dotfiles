@@ -1,0 +1,6 @@
+2021/06/09-07:46:06.993 688 Reusing MANIFEST /home/redpill/.config/Slack/Local Storage/leveldb/MANIFEST-000001
+2021/06/09-07:46:06.994 688 Recovering log #109
+2021/06/09-07:46:06.994 688 Reusing old log /home/redpill/.config/Slack/Local Storage/leveldb/000109.log 
+2021/06/09-09:20:07.336 138d Level-0 table #113: started
+2021/06/09-09:20:07.341 138d Level-0 table #113: 17265 bytes OK
+2021/06/09-09:20:07.345 138d Delete type=0 #109

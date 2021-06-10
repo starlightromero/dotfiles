@@ -1,0 +1,45 @@
+2021/06/08-09:27:27.189 1320 Reusing MANIFEST /home/redpill/.config/Slack/Local Storage/leveldb/MANIFEST-000001
+2021/06/08-09:27:27.189 1320 Recovering log #90
+2021/06/08-09:27:27.189 1320 Reusing old log /home/redpill/.config/Slack/Local Storage/leveldb/000090.log 
+2021/06/08-10:02:27.662 19a6 Level-0 table #94: started
+2021/06/08-10:02:27.668 19a6 Level-0 table #94: 18869 bytes OK
+2021/06/08-10:02:27.674 19a6 Delete type=0 #90
+2021/06/08-10:38:27.660 19a6 Level-0 table #96: started
+2021/06/08-10:38:27.667 19a6 Level-0 table #96: 20683 bytes OK
+2021/06/08-10:38:27.673 19a6 Delete type=0 #93
+2021/06/08-12:48:27.668 2a17 Level-0 table #98: started
+2021/06/08-12:48:27.674 2a17 Level-0 table #98: 17275 bytes OK
+2021/06/08-12:48:27.678 2a17 Delete type=0 #95
+2021/06/08-12:48:27.678 2a17 Compacting 4@0 + 1@1 files
+2021/06/08-12:48:27.682 2a17 Generated table #99@0: 9 keys, 5281 bytes
+2021/06/08-12:48:27.682 2a17 Compacted 4@0 + 1@1 files => 5281 bytes
+2021/06/08-12:48:27.686 2a17 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/06/08-12:48:27.687 2a17 Delete type=2 #91
+2021/06/08-12:48:27.687 2a17 Delete type=2 #98
+2021/06/08-12:48:27.687 2a17 Delete type=2 #96
+2021/06/08-12:48:27.687 2a17 Delete type=2 #94
+2021/06/08-12:48:27.687 2a17 Delete type=2 #88
+2021/06/08-13:27:27.659 364d Level-0 table #101: started
+2021/06/08-13:27:27.666 364d Level-0 table #101: 16256 bytes OK
+2021/06/08-13:27:27.671 364d Delete type=0 #97
+2021/06/08-14:36:27.662 3cef Level-0 table #103: started
+2021/06/08-14:36:27.669 3cef Level-0 table #103: 16075 bytes OK
+2021/06/08-14:36:27.676 3cef Delete type=0 #100
+2021/06/08-15:32:27.661 4efd Level-0 table #105: started
+2021/06/08-15:32:27.669 4efd Level-0 table #105: 19730 bytes OK
+2021/06/08-15:32:27.677 4efd Delete type=0 #102
+2021/06/08-17:13:27.661 5cd3 Level-0 table #107: started
+2021/06/08-17:13:27.669 5cd3 Level-0 table #107: 14892 bytes OK
+2021/06/08-17:13:27.676 5cd3 Delete type=0 #104
+2021/06/08-17:13:27.676 5cd3 Compacting 4@0 + 1@1 files
+2021/06/08-17:13:27.682 5cd3 Generated table #108@0: 9 keys, 5137 bytes
+2021/06/08-17:13:27.682 5cd3 Compacted 4@0 + 1@1 files => 5137 bytes
+2021/06/08-17:13:27.688 5cd3 compacted to: files[ 0 1 1 0 0 0 0 ]
+2021/06/08-17:13:27.689 5cd3 Delete type=2 #99
+2021/06/08-17:13:27.689 5cd3 Delete type=2 #105
+2021/06/08-17:13:27.689 5cd3 Delete type=2 #103
+2021/06/08-17:13:27.689 5cd3 Delete type=2 #101
+2021/06/08-17:13:27.689 5cd3 Delete type=2 #107
+2021/06/08-21:15:27.670 78f7 Level-0 table #110: started
+2021/06/08-21:15:27.678 78f7 Level-0 table #110: 11654 bytes OK
+2021/06/08-21:15:27.686 78f7 Delete type=0 #106

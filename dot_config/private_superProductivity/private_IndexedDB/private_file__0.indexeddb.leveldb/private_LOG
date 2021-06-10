@@ -1,0 +1,6 @@
+2021/06/09-10:29:00.618 c86b Reusing MANIFEST /home/redpill/.config/superProductivity/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
+2021/06/09-10:29:00.618 c86b Recovering log #2244
+2021/06/09-10:29:00.626 c86b Reusing old log /home/redpill/.config/superProductivity/IndexedDB/file__0.indexeddb.leveldb/002244.log 
+2021/06/09-10:29:19.660 c869 Level-0 table #2249: started
+2021/06/09-10:29:19.682 c869 Level-0 table #2249: 1302499 bytes OK
+2021/06/09-10:29:19.687 c869 Delete type=0 #2244

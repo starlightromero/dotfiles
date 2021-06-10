@@ -1,0 +1,19 @@
+[2021-06-03 20:34:56.320] [sharedprocess] [info] Starting to clean up unused language packs.
+[2021-06-03 20:40:38.934] [sharedprocess] [info] Installing extension: dbaeumer.vscode-eslint
+[2021-06-03 20:40:39.566] [sharedprocess] [info] Downloaded extension: dbaeumer.vscode-eslint /home/redpill/.config/VSCodium/CachedExtensionVSIXs/dbaeumer.vscode-eslint-2.1.8
+[2021-06-03 20:40:39.625] [sharedprocess] [info] Extracted extension to /home/redpill/.vscode-oss/extensions/.d46d3bf0-eadd-41b5-a7f4-a042f2f3ac36: dbaeumer.vscode-eslint
+[2021-06-03 20:40:39.631] [sharedprocess] [info] Renamed to /home/redpill/.vscode-oss/extensions/dbaeumer.vscode-eslint-2.1.8
+[2021-06-03 20:40:39.632] [sharedprocess] [info] Installation completed. dbaeumer.vscode-eslint
+[2021-06-03 20:40:39.637] [sharedprocess] [info] Extensions installed successfully: dbaeumer.vscode-eslint
+[2021-06-03 20:40:43.241] [sharedprocess] [info] Installing extension: ms-python.python
+[2021-06-03 20:40:54.791] [sharedprocess] [info] Downloaded extension: ms-python.python /home/redpill/.config/VSCodium/CachedExtensionVSIXs/ms-python.python-2020.10.332292344
+[2021-06-03 20:40:57.166] [sharedprocess] [info] Extracted extension to /home/redpill/.vscode-oss/extensions/.2645b465-a0da-47b0-843e-c2f3df6aee79: ms-python.python
+[2021-06-03 20:40:57.190] [sharedprocess] [info] Renamed to /home/redpill/.vscode-oss/extensions/ms-python.python-2020.10.332292344
+[2021-06-03 20:40:57.194] [sharedprocess] [info] Installation completed. ms-python.python
+[2021-06-03 20:40:57.203] [sharedprocess] [info] Extensions installed successfully: ms-python.python
+[2021-06-03 20:42:03.400] [sharedprocess] [info] Installing extension: esbenp.prettier-vscode
+[2021-06-03 20:42:04.650] [sharedprocess] [info] Downloaded extension: esbenp.prettier-vscode /home/redpill/.config/VSCodium/CachedExtensionVSIXs/esbenp.prettier-vscode-6.4.0
+[2021-06-03 20:42:04.879] [sharedprocess] [info] Extracted extension to /home/redpill/.vscode-oss/extensions/.1fc90725-57d9-468d-8989-7823dd14cc17: esbenp.prettier-vscode
+[2021-06-03 20:42:04.885] [sharedprocess] [info] Renamed to /home/redpill/.vscode-oss/extensions/esbenp.prettier-vscode-6.4.0
+[2021-06-03 20:42:04.886] [sharedprocess] [info] Installation completed. esbenp.prettier-vscode
+[2021-06-03 20:42:04.890] [sharedprocess] [info] Extensions installed successfully: esbenp.prettier-vscode

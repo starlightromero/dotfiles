@@ -1,0 +1,226 @@
+Looking for git in: git
+Using git 2.31.1 from git
+> git rev-parse --git-dir
+Open repository: /home/redpill/MakeSchool/StockStalker/nginx
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/production refs/remotes/production
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/production', is most likely packed.
+> git config --get commit.template
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show --textconv :docker-compose.yml
+> git ls-files --stage -- /home/redpill/MakeSchool/StockStalker/nginx/docker-compose.yml
+> git cat-file -s 400c773a628bf25452ee291519318ca9d4d3a745
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/production refs/remotes/production
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/production', is most likely packed.
+> git config --get commit.template
+> git ls-files --stage -- /home/redpill/MakeSchool/StockStalker/nginx/docker-compose.yml
+> git cat-file -s 400c773a628bf25452ee291519318ca9d4d3a745
+> git show --textconv :docker-compose.yml
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/production refs/remotes/production
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/production', is most likely packed.
+> git config --get commit.template
+> git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%B -z -n21 -- /home/redpill/MakeSchool/StockStalker/nginx/docker-compose.yml
+> git show --textconv :Makefile
+> git ls-files --stage -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git cat-file -s bf339549d7c247723ff9849b6a3d16f509c06610
+> git ls-files --stage -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git check-ignore -v -z --stdin
+> git cat-file -s 756df074c9369ec81a0c0bfe82aa273a598860bc
+> git show --textconv :Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/development', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/development', is most likely packed.
+> git config --get commit.template
+> git show --textconv :Dockerfile
+> git ls-files --stage -- /home/redpill/MakeSchool/StockStalker/nginx/Dockerfile
+> git cat-file -s 556e05b107bc8df0329ec5c57232e46ebbf1b1fc
+> git show --textconv :Makefile
+> git ls-files --stage -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git cat-file -s 756df074c9369ec81a0c0bfe82aa273a598860bc
+> git show --textconv :default.dev.conf
+> git ls-files --stage -- /home/redpill/MakeSchool/StockStalker/nginx/default.dev.conf
+> git cat-file -s 0f2e1a39cbdaaf4b25dc1483b451ceafdf3e2110
+> git show --textconv :default.conf
+> git ls-files --stage -- /home/redpill/MakeSchool/StockStalker/nginx/default.conf
+> git cat-file -s 2991ed4cfc95595d852572a057c334f9deaa070d
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/development', is most likely packed.
+> git config --get commit.template
+> git show --textconv HEAD:default.conf
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/default.conf
+> git show --textconv HEAD:Makefile
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+git.stage 1
+git.stage.scmResources 1
+> git add -A -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/development', is most likely packed.
+> git config --get commit.template
+> git ls-files --stage -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git cat-file -s 6cb43f52bfce1d8f551c89887c2166687770fe74
+> git show --textconv :Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/development', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/development', is most likely packed.
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/development', is most likely packed.
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/development', is most likely packed.
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+Warning: Failed to watch ref '/home/redpill/MakeSchool/StockStalker/nginx/.git/refs/remotes/origin/development', is most likely packed.
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template
+> git ls-tree -l HEAD -- /home/redpill/MakeSchool/StockStalker/nginx/Makefile
+> git show --textconv HEAD:Makefile
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/development refs/remotes/development
+> git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname)
+> git remote --verbose
+> git config --get commit.template

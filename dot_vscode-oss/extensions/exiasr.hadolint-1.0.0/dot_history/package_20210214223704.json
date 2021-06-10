@@ -1,0 +1,73 @@
+{
+	"name": "hadolint",
+	"description": "A multi server LSP example",
+	"author": "Microsoft Corporation",
+	"license": "MIT",
+	"version": "1.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-extension-samples"
+	},
+	"publisher": "exiasr",
+	"categories": [],
+	"keywords": [
+		"multi-root ready"
+	],
+	"engines": {
+		"vscode": "^1.52.0",
+		"node": "^12"
+	},
+	"activationEvents": [
+		"onLanguage:plaintext"
+	],
+	"main": "./client/out/extension",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Hadolint - A Dockerfile linter",
+			"properties": {
+				"hadolint.hadolintPath": {
+					"type": "string",
+					"default": "hadolint",
+					"description": "Path to hadolint executable. Windows user, make sure you escape the back slash in the path, e.g, C:\\\\path\\to\\\\hadolint\\\\excutable"
+				},
+				"hadolint.maxNumberOfProblems": {
+					"scope": "resource",
+					"type": "number",
+					"default": 100,
+					"description": "Controls the maximum number of problems produced by the server."
+				},
+				"hadolint.outputLevel": {
+					"type": "string",
+					"enum": [
+						"error",
+						"info",
+						"warning",
+						"hint"
+					],
+					"default": "warning",
+					"description": "Set the default output level of hadolint message."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "hadolint.selectExecutable",
+				"title": "Select Hadolint Executable",
+				"category": "Hdolint"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+	},
+	"devDependencies": {
+		"@types/mocha": "^5.2.0",
+		"@types/node": "^12.12.0",
+		"rome": "^10.0.4-beta",
+		"typescript": "^4.0.2"
+	}
+}

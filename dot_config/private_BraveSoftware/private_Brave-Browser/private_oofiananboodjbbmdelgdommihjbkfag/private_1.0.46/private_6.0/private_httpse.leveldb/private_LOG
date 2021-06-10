@@ -1,0 +1,7 @@
+2021/06/09-10:26:22.637 c73b Recovering log #3
+2021/06/09-10:26:22.817 c73b Level-0 table #5: started
+2021/06/09-10:26:22.887 c73b Level-0 table #5: 2784458 bytes OK
+2021/06/09-10:26:22.894 c73b Recovering log #7
+2021/06/09-10:26:22.911 c73b Delete type=0 #7
+2021/06/09-10:26:22.911 c73b Delete type=3 #2
+2021/06/09-10:26:22.911 c73b Delete type=0 #3

@@ -1,0 +1,7 @@
+[2021-06-03 14:04:32.069] [sharedprocess] [info] Installing extension: pmbenjamin.vscode-snyk
+[2021-06-03 14:04:35.606] [sharedprocess] [info] Downloaded extension: pmbenjamin.vscode-snyk /home/redpill/.config/VSCodium/CachedExtensionVSIXs/pmbenjamin.vscode-snyk-0.0.2
+[2021-06-03 14:04:40.948] [sharedprocess] [info] Extracted extension to /home/redpill/.vscode-oss/extensions/.503b0a9e-10e7-4113-94e5-a75010cb234f: pmbenjamin.vscode-snyk
+[2021-06-03 14:04:40.963] [sharedprocess] [info] Renamed to /home/redpill/.vscode-oss/extensions/pmbenjamin.vscode-snyk-0.0.2
+[2021-06-03 14:04:40.964] [sharedprocess] [info] Installation completed. pmbenjamin.vscode-snyk
+[2021-06-03 14:04:40.969] [sharedprocess] [info] Extensions installed successfully: pmbenjamin.vscode-snyk
+[2021-06-03 14:05:04.931] [sharedprocess] [info] Starting to clean up unused language packs.

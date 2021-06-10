@@ -1,0 +1,7 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+[ -s "/home/redpill/.jabba/jabba.sh" ] && source "/home/redpill/.jabba/jabba.sh"
