@@ -13,7 +13,1684 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(pyenv init --path)"
 
+# Theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+setopt HIST_IGNORE_SPACE
+
+# AWS Autocompletion
+export PATH=/Users/starlight.romero/.pyenv/shims/aws_completer:/Users/starlight.romero/go/bin:/usr/local/share/dotnet:/usr/local/opt/libpq/bin:/usr/local/opt/curl/bin:${KREW_ROOT:-$HOME/.krew}/bin:$(brew --prefix)/opt/findutils/libexec/gnubin:$HOME/.goenv/shims:$PATH
+
+export no_proxy="*"
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+export GPG_TTY=$(tty)
+
+export AWS_PROFILE=mba
+export AWS_SDK_LOAD_CONFIG=1
+
+export GOPROXY=direct
+
+export KUBECONFIG="$HOME/.kube/config"
+
+export SAML2AWS_ROLE=arn:aws:iam::657062785455:role/orbit
+export SAML2AWS_USERNAME=starlight.romero
+
+export ZSH=/Users/starlight.romero/.zsh
+export ZSH_THEME="powerlevel10k/powerlevel10k"
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+
+# Set default editor
+VISUAL=vim
+EDITOR="$VISUAL"
+KUBE_EDITIOR=vim
+
+TERM=xterm-256color
+
+fpath=($fpath ~/.zsh/completion)
+
+########################################################################################################################################
+# _____/\\\\\\\\\_____/\\\______________/\\\\\\\\\\\_____/\\\\\\\\\________/\\\\\\\\\\\____/\\\\\\\\\\\\\\\_____/\\\\\\\\\\\___        #
+#  ___/\\\\\\\\\\\\\__\/\\\_____________\/////\\\///____/\\\\\\\\\\\\\____/\\\/////////\\\_\/\\\///////////____/\\\/////////\\\_       #
+#   __/\\\/////////\\\_\/\\\_________________\/\\\______/\\\/////////\\\__\//\\\______\///__\/\\\______________\//\\\______\///__      #
+#    _\/\\\_______\/\\\_\/\\\_________________\/\\\_____\/\\\_______\/\\\___\////\\\_________\/\\\\\\\\\\\_______\////\\\_________     #
+#     _\/\\\\\\\\\\\\\\\_\/\\\_________________\/\\\_____\/\\\\\\\\\\\\\\\______\////\\\______\/\\\///////___________\////\\\______    #
+#      _\/\\\/////////\\\_\/\\\_________________\/\\\_____\/\\\/////////\\\_________\////\\\___\/\\\_____________________\////\\\___   #
+#       _\/\\\_______\/\\\_\/\\\_________________\/\\\_____\/\\\_______\/\\\__/\\\______\//\\\__\/\\\______________/\\\______\//\\\__  #
+#        _\/\\\_______\/\\\_\/\\\\\\\\\\\\\\\__/\\\\\\\\\\\_\/\\\_______\/\\\_\///\\\\\\\\\\\/___\/\\\\\\\\\\\\\\\_\///\\\\\\\\\\\/___ #
+#         _\///________\///__\///////////////__\///////////__\///________\///____\///////////_____\///////////////____\///////////_____#
+########################################################################################################################################
+
+alias -s {json,tf,yaml,yml}=code
+
+alias decode='aws sts decode-authorization-message --output text --encoded-message'
+
+alias python='/opt/homebrew/bin/python3'
+alias pip='/opt/homebrew/bin/pip3'
+alias venv='python3 -m venv venv'
+alias activate='source ./venv/bin/activate'
+
+# list files with color
+alias ls='ls -G'
+alias ll='ls -Glah'
+
+# confirm before overwriting something
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+eu () {
+  eksup analyze -c $(kubectl config current-context | gsed -e 's/^.*\///') -r us-east-1
+}
+
+alias tg=terragrunt
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/code/starlight.romero/dotfiles/ --work-tree=$HOME'
+
+alias saml='saml2aws'
+
+eval $(thefuck --alias)
+eval "$(rbenv init - zsh)"
+
+alias vc='vcluster'
+
+#############################
+#  ____                     #
+# | __ ) _ __ _____      __ #
+# |  _ \| '__/ _ \ \ /\ / / #
+# | |_) | | |  __/\ V  V /  #
+# |____/|_|  \___| \_/\_/   #
+#############################
+
+alias br='brew'
+alias brana='br analytics'
+alias brcat='br cat'
+alias brcle='br cleanup'
+alias brcom='br command'
+alias brcoms='br commands'
+alias brcon='br config'
+alias brdep='br deps'
+alias brdes='br desc'
+alias brdiy='br diy'
+alias brdoc='br doctor'
+alias brfet='br fetch'
+alias brgis='br gist-logs'
+alias brhom='br home'
+alias brinf='br info'
+alias brins='br install'
+alias brlea='br leaves'
+alias brlis='br list'
+alias brln='br ln'
+alias brlog='br log'
+alias brmig='br migrate'
+alias brmig='br missing'
+alias broca='br --cache'
+alias broce='br --cellar'
+alias broen='br --env'
+alias bropr='br --prefix'
+alias bropt='br options'
+alias brore='br --repository'
+alias brout='br outdated'
+alias brove='br --version'
+alias brpin='br pin'
+alias brpos='br postinstall'
+alias brpru='br prune'
+alias brrea='br readall'
+alias brrei='br reinstall'
+alias brsea='br search'
+alias brsh='br sh'
+alias brsty='br style'
+alias brswi='br switch'
+alias brtap='br tap'
+alias brtapi='br tap-info'
+alias brtapp='br tap-pin'
+alias brtapu='br tap-unpin'
+alias brun='br uninstall'
+alias bruli='br unlink'
+alias brupa='br unpack'
+alias brupd='br update'
+alias brupdr='br update-reset'
+alias brupg='br upgrade'
+alias brupi='br unpin'
+alias bruse='br uses'
+alias bruta='br untap'
+alias brse='br services'
+alias brseli='brse list'
+alias sbrse='sudo brse'
+
+
+#######################################
+#     ____             __             #
+#    / __ \____  _____/ /_____  _____ #
+#   / / / / __ \/ ___/ //_/ _ \/ ___/ #
+#  / /_/ / /_/ / /__/ ,< /  __/ /     #
+# /_____/\____/\___/_/|_|\___/_/      #
+#######################################
+alias d='docker'
+alias dc='docker compose'
+alias db='docker build'
+alias dr='docker run'
+alias dp='docker push'
+alias dpl='docker pull'
+alias dls='docker container ls'
+alias di='docker images'
+alias drm='docker rm'
+alias drmi='docker rmi'
+alias drmia='docker image prune'
+
+alias e='eksctl'
+
+alias grep="grep --colour=auto"
+
+# Flux
+
+alias f='flux'
+alias fr='flux resume -n $(kubectl config view --minify -o jsonpath="{..namespace}")'
+alias frk='flux resume -n $(kubectl config view --minify -o jsonpath="{..namespace}") kustomization'
+alias frn='flux resume -n'
+alias fs='flux suspend -n $(kubectl config view --minify -o jsonpath="{..namespace}")'
+alias fsk='flux suspend -n $(kubectl config view --minify -o jsonpath="{..namespace}") kustomization'
+alias fsn='flux suspend -n'
+
+##################
+#    _______ __  #
+#   / ____(_) /_ #
+#  / / __/ / __/ #
+# / /_/ / / /_   #
+# \____/_/\__/   #
+##################
+
+alias g='git'
+
+alias ga='git add'
+alias gaa='git add --all'
+alias gai='git add --interactive'
+alias galias='git_list_aliases'
+# Amend the most recent local commit:
+alias gam='git commit --amend -m' # Only change commit message (optionally 'git add' files)
+alias gama='git commit --amend -am' # Add all modified files and change commit message
+alias gan='git commit --amend --no-edit' # Keep commit message (optionally 'git add' files)
+alias gana='git commit --amend --no-edit -a' # Add all modified files, but keep commit message
+alias gap='git add --patch'
+
+alias gb='git branch'
+alias gba='git branch --all'
+alias gbd='git branch --delete'
+alias gbdf='git branch --delete --force'
+alias gbl='git blame'
+# 'git blame' that optionally takes line numbers:
+# Usage: gbll <file> [<from line>] [<to line>]
+#   E.g. gbll README.md 10
+#      = gbll README.md 10 10
+#      = gbll README.md 10,10
+#      = git blame README.md -L 10,10
+alias gbll='git_blame_line'
+alias gbls='git branch --list | cat'
+alias gbs='git bisect'
+alias gbsb='git bisect bad'
+alias gbsg='git bisect good'
+alias gbsr='git bisect reset'
+alias gbss='git bisect start'
+
+alias gc='git commit --verbose'
+alias gcam='git commit -am'
+alias gcame='git commit --allow-empty-message -am ""'
+alias gcamg='git commit --gpg-sign -am'
+alias gcams='git commit --signoff -am'
+alias gcamu='git commit -am "Update"'
+alias gcem='git commit --allow-empty -m'
+alias gcf='git config'
+alias gcfl='git config --list'
+alias gcfls='git config --list | cat'
+alias gcl='git clone --recurse-submodules'
+alias gclcd='git_clone_and_cd'
+alias gcm='git commit -m'
+alias gcmg='git commit --gpg-sign -m'
+alias gcms='git commit --signoff -m'
+# Count the number of commits on a branch:
+alias gcnt='git_count'
+alias gcnta='git_count_all'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcobb='git checkout -' # "checkout branch before"
+# Check out a child commit:
+# Usage: gcoc [<number of commits after HEAD>]
+#   E.g. gcoc = gcoc 1   => checks out direct child
+#               gcoc 2   => checks out grandchild
+alias gcoc='git_checkout_child'
+alias gcod='git checkout develop'
+alias gcom='git checkout $(git_main_branch)'
+# Check out a parent commit:
+# Usage: gcop [<number of commits before HEAD>]
+#   E.g. gcop = gcop 1   => checks out direct parent
+#               gcop 2   => checks out grandparent
+alias gcop='git_checkout_parent'
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
+
+alias gd='git diff'
+alias gds='git diff --staged'
+# Show the diff between latest stash and local working tree:
+alias gdst='git diff stash@{0}' # = git stash show -l
+# Show the diff between latest stash and HEAD:
+alias gdsth='git diff stash@{0} HEAD'
+# Show the diff between latest stash and its original parent commit:
+alias gdstp='git diff stash@{0}^ stash@{0}' # = git stash show -p
+
+alias gf='git fetch'
+alias gfo='git fetch origin'
+
+# git graph branches:
+alias ggb='git log --graph --all --simplify-by-decoration --date=format:"%d/%m/%y" --pretty=format:"%C(yellow)%h%Creset%x09%C(bold green)%D%Creset%n%C(white)%ad%Creset%x09%C(bold)%s%Creset%n"'
+
+# git init
+alias gi='git init'
+
+# Ignore already tracked files:
+alias gignore='git update-index --skip-worktree'
+alias gunignore='git update-index --no-skip-worktree'
+alias gignored='git ls-files -v | grep ^S'
+
+# Best default 'git log':
+alias gl='glog --name-status'
+# View the full change history of a single file:
+# Usage: glf <file> [<from line>] [<to line>]
+alias glf='git_log_file'
+# Fancy 'git log --graph':
+alias glg='glog --graph'
+# Fancy 'git log --graph --oneline':
+alias glgo='git log --graph --date=format:"%d/%m/%y" --pretty=format:"%C(yellow)%h%Creset   %C(white)%ad%Creset   %C(bold)%s    %C(bold green)%D%Creset%n"'
+# Fancy 'git log --graph --stat':
+alias glgs='glog --graph --stat'
+# Fancy 'git log --oneline':
+alias glo='git log --date=format:"%d/%m/%y" --pretty=format:"%C(yellow)%h%Creset   %C(white)%ad%Creset   %C(bold)%s    %C(bold green)%D%Creset"'
+# Locate all commits in which a specific line of code (string) was first introduced:
+# Usage: gloc <Line-of-Code> [<file>]
+alias gloc='git_locate_string'
+# Regular 'git log' in style:
+alias glog='git log --date=format:"%A %B %d %Y at %H:%M" --pretty=format:"%C(yellow)%H%Creset%x09%C(bold green)%D%Creset%n%<|(40)%C(white)%ad%x09%an%Creset%n%n    %C(bold)%s%Creset%n%w(0,4,4)%n%-b%n"' # %w(0,4,4): no line-wrap, indent first line 4 chars, subsequent lines also 4 lines
+alias glr='glog --reverse --name-status'
+alias gls='git ls-files'
+
+alias gm='git merge'
+alias gmom='git merge origin/$(git_main_branch)'
+alias gmum='git merge upstream/$(git_main_branch)'
+alias gmv='git mv'
+
+alias gp='git push'
+alias gpd='git push --delete'
+alias gpdo='git push --delete origin'
+alias gpf='git push --force-with-lease'
+alias gpt='git push && git push --tags'
+alias gpl='git pull'
+alias gplr='git pull --rebase'
+alias gplrs='git pull --recurse-submodules'
+
+# `grhard` is intentionally more verbose because `--hard` is unsafe;
+# there is no way to recover uncommitted changes.
+# In general the `--keep` flag is preferable. It will do exactly the same,
+# but abort if a file has uncommitted changes.
+# Having to type 'grhard' in full will make us think twice
+# about whether we REALLY want to get rid of all dirty files.
+alias gr='git reset --mixed' # Keep changes, but unstage them (`--mixed` = default behaviour)
+alias grhard='git reset --hard' # Remove changes, including anything uncommitted (Dangerous!)
+alias grk='git reset --keep' # Safer version of `--hard`: reset is aborted if a file is dirty
+alias grs='git reset --soft' # Keep changes, and keep them staged
+# Reset HEAD to a previous commit:
+# Usage: grh [<number of commits before HEAD>]
+#   E.g. grh = grh 1   => Reset HEAD to previous commit
+#              grh 2   => Reset HEAD 2 commits
+alias grh='git_reset_head --mixed'
+alias grhhard='git_reset_head --hard'
+alias grhk='git_reset_head --keep'
+alias grhs='git_reset_head --soft'
+alias grb='git rebase'
+alias grbm='git rebase $(git_main_branch)'
+alias grem='git remote'
+alias grema='git remote add'
+alias gremrm='git remote rm'
+alias gremset='git remote set-url'
+alias gremsh='git remote show'
+alias gremv='git remote -v'
+alias grl='git reflog' # Useful to restore lost commits after reset
+alias grm='git rm'
+
+# Yes, I am aware gs is commonly aliased to ghostscript,
+# but since my usage of ghostscript is rare compared to git,
+# I can live with typing 'ghostscript' in full when necessary.
+alias gs='git status'
+alias gsh='git show --date=format:"%A %B %d %Y at %H:%M" --pretty=format:"%C(yellow)%H%Creset%x09%C(bold green)%D%Creset%n%<|(40)%C(white)%ad%x09%an%Creset%n%n    %C(bold)%s%Creset%n%w(0,4,4)%+b%n"'
+# Show a specified file from stash x (defaults to lastest stash):
+# Usage: gshsf <file> [<stash number>]
+alias gshsf='git_show_stash_file'
+alias gss='git_status_short' # Usage: gss [<number of commits>]
+alias gst='git stash'
+alias gsta='git stash apply'
+alias gstd='git stash drop'
+alias gstl='git stash list'
+alias gstls='git stash list | cat'
+alias gstp='git stash push'
+alias gstpop='git stash pop'
+# Show the diff between latest stash and local working tree:
+alias gstsl='git stash show -l' # = git diff stash@{0}
+# Show the diff between latest stash and its original parent commit:
+alias gstsp='git stash show -p' # = git diff stash@{0}^! = git diff stash@{0}^ stash@{0}
+alias gsub='git submodule'
+alias gsuba='git submodule add'
+alias gsubi='git submodule update --init' # Initialize submodules
+alias gsubpl='git submodule foreach git pull'
+alias gsubplom='git submodule foreach git pull origin $(git_main_branch)'
+alias gsubs='git submodule status'
+alias gsubu='git submodule update --remote --merge' # Update submodules
+
+alias gt='git tag'
+alias gtam='git tag -am' # <- takes message before annotated tag name: e.g. gtam 'Release v1.0.0' v1.0.0
+alias gtsm='git tag -sm' # GPG sign an annotated tag
+alias gtd='git tag --delete'
+alias gtl='git tag --list'
+alias gtls='git tag --list | cat'
+
+alias gwch='git whatchanged -p --date=format:"%A %B %d %Y at %H:%M" --pretty=format:"%n%n%C(yellow)%H%Creset%x09%C(bold green)%D%Creset%n%<|(40)%C(white)%ad%x09%an%Creset%n%n    %C(bold)%s%Creset%n%w(0,4,4)%+b%n"'
+
+
+# Functions
+################
+
+# git blame that optionally takes line numbers:
+# Usage: git_blame_line <file> [<from line>] [<to line>]
+function git_blame_line() {
+  if [[ -z $1 ]]; then
+    echo "Usage:    git_blame_line <file> [<from line>] [<to line>]"
+    return 1
+  elif [[ -z $2 ]]; then
+    2=1   # Set 'from' line number to first line
+  elif [[ $2 == *,* ]]; then
+    3=${2#*,}
+    2=${2%,*}
+  elif [[ -z $3 ]]; then
+    3=$2
+  fi
+  git blame $1 -L $2,$3
+}
+
+# Checkout parent/older commit:
+function git_checkout_parent() {
+  git checkout HEAD~$1
+}
+
+# Checkout child/newer commit:
+function git_checkout_child() {
+  children=$(git log --all --ancestry-path ^HEAD --format=format:%H | cat)
+  if [[ -z $children ]]; then
+    echo -n 'This commit does not have any children\nHEAD remains at '
+    git log -1 --oneline | cat
+    return 1
+  else
+    # Take the first child, or the one specified by the input arg:
+    child=$(echo $children | tail -n "${1:-1}" | head -n 1)
+    # If the child to checkout is at the branch's tip ...
+    if [[ "$(echo $children | grep '' -c)" -le "${1:-1}" ]]; then
+      branch=$(git branch --contains $child | xargs)
+      # ... and there is only 1 branch with that commit ...
+      if ! [[ $branch =~ ' ' ]]; then
+        # ... checkout the branch itself instead of the specific hash:
+        child=$branch
+      fi
+    fi
+  fi
+
+  git checkout $child
+}
+
+function git_clone_and_cd() {
+  if [[ -z $2 ]]; then
+    git clone --recurse-submodules $1 && cd $(basename $1 .git)
+  else
+    git clone --recurse-submodules $1 $2 && cd $2
+  fi
+}
+
+function git_count() {
+  echo "$(git rev-list --count HEAD) commits total up to current HEAD"
+}
+
+function git_count_all() {
+  git shortlog -sn | cat
+  echo -n '+ _______________________________________\n\n  '
+  git_count
+}
+
+# List all git aliases from the README:
+function git_list_aliases() {
+  filename=~/.oh-my-zsh/custom/plugins/git/README.md
+  from=$(grep -Fno '| **g** ' ${filename} | cut -f1 -d:)
+  stop=$(grep -no '&nbsp;' ${filename} | cut -f1 -d:)
+  to=$((stop - 2))
+
+  echo '_______________________________________________________________________________
+|             |                                                               |
+| Alias       | Command                                                       |
+|_____________|_______________________________________________________________|
+|             |                                                               |'
+
+  sed -n "${from},${to}p;${stop}q" ${filename} | # Take out table
+    tr -d '*\\' |    # Remove **bold** and \ escapes
+    sed 's/.$//' |   # Remove last '|' because its no longer lining up
+    while read -r line ; do
+      echo "${(r:78:)line}" # Pad spaces to 78 chars (zsh specific)
+    done |
+    sed 's/$/|/'     # Re-append final '|'
+
+  echo '|_____________|_______________________________________________________________|
+
+
+Note:
+This cheatsheet is optimized for memorability,
+and may not correspond literally with the actual aliases.
+
+If you want to see all alias implementations, run `alias`.
+If you want to see a specific implementation, run `which <alias/function>`.'
+}
+
+# Locate all commits in which a specific line of code (string) was first introduced:
+function git_locate_string() {
+  if [[ -z $1 ]]; then
+    echo "Usage:    git_loc <Line-of-Code> [<file>]"
+    return 1
+  fi
+  gl -S $1 -- $2
+}
+
+# View the full change history of a single file:
+function git_log_file() {
+  if [[ -z $1 ]]; then
+    echo "Usage:    git_log_file <file> [<from line>] [<to line>]"
+    return 1
+  elif [[ -z $2 ]]; then
+    glog -p -- $1
+    return 0
+  elif [[ $2 == *,* ]]; then
+    3=${2#*,}
+    2=${2%,*}
+  elif [[ -z $3 ]]; then
+    3=$2
+  fi
+  glog -L $2,$3:$1
+}
+
+# Check if main exists and use instead of master:
+function git_main_branch() {
+  if [[ -n "$(git branch --list main)" ]]; then
+  # -n: True if length of string output is non-zero
+    echo main
+  else
+    echo master
+  fi
+}
+
+# Reset the head to a previous commit (defaults to direct parent):
+function git_reset_head() {
+  git reset HEAD~$2 $1
+  # Failure case:
+  if [[ $? != 0 ]]; then
+    echo -n 'HEAD remains at '
+    git log -1 --oneline | cat
+    return 1
+  # Success case:
+  elif [[ $1 != '--hard' ]]; then
+    echo -n 'HEAD is now at '
+    git log -1 --oneline | cat
+  fi
+}
+
+# Show a specified file from stash x (defaults to lastest stash):
+function git_show_stash_file() {
+  if [[ -z $1 ]]; then
+    echo "Usage:    git_show_stash_file <file> [<stash number>]"
+    return 1
+  fi
+  git show stash@{${2:-0}}:$1
+}
+
+# Print short status and log of latest commits:
+function git_status_short() {
+  if [[ -z $(git status -s) ]]; then
+    echo 'Nothing to commit, working tree clean\n'
+  else
+    git status -s && echo ''
+  fi
+  git log -${1:-3} --oneline | cat
+}
+
+#############################
+#    __  __     __          #
+#    / / / /__  / /___ ___  #
+#   / /_/ / _ \/ / __ `__ \ #
+#  / __  /  __/ / / / / / / #
+# /_/ /_/\___/_/_/ /_/ /_/  #
+#############################
+
+alias h=helm
+alias hc="helm create"
+alias hh="helm history"
+alias hi="helm install"
+alias hif="helm install -f"
+alias hl="helm lint"
+alias hlf="helm lint -f"
+alias hls="helm list"
+alias hp="helm package"
+alias hr="helm repo"
+alias hra="helm repo add"
+alias hri="helm repo index"
+alias hru="helm repo update"
+alias ht="helm template"
+alias htf="helm template -f"
+alias hun="helm uninstall"
+alias hup="helm upgrade"
+
+alias hf=helmfile
+alias hfs="helmfile sync"
+alias hfd="helmfile destroy"
+alias hfl="helmfile list"
+
+alias i=istioctl
+
+###############
+#  _  _____   #
+# | |/ ( _ )  #
+# | ' // _ \  #
+# | . \ (_) | #
+# |_|\_\___/  #
+###############
+
+alias max-pods-calculator='~/code/max-pods-calculator.sh'
+
+alias kk='kubectl krew'
+alias kki='kubectl krew install'
+alias kkupd='kubectl krew update'
+alias kkupg='kubectl krew upgrade'
+alias kks='kubectl krew search'
+alias kkun='kubectl krew uninstall'
+
+# For some reason this is sourcing the oh-my-zsh plugin.
+# source <(kubectl completion zsh)
+
+# Contexts
+alias kcc='kubectl config get-contexts'
+alias kctx='kubie ctx'
+
+# Core
+alias k='kubectl'
+alias kd='kubectl delete'
+alias kds='kubectl describe'
+alias ke='kubectl edit'
+alias kg='kubectl get'
+alias kl='kubectl logs'
+alias klf='kubectl logs -f'
+alias kp='kubectl patch'
+alias kw='kubectl watch'
+
+export drc='--dry-run=client -o yaml'
+export drs='--dry-run=server -o yaml'
+
+alias kaci='kubectl auth can-i' 
+
+# Canary
+alias kdcan='kubectl delete canary'
+alias kdscan='kubectl describe canary'
+alias kecan='kubectl edit canary'
+alias kgcan='kubectl get canary'
+alias kgcana='kubectl get canary -A'
+alias kgcanj='kubectl get canary -o json'
+alias kgcany='kubectl get canary -o yaml'
+alias kpcan='kubectl patch canary'
+alias kwcan='kubectl watch canary'
+alias kwcana='kubectl watch canary -A'
+
+# certificate
+alias kdc='kubectl delete certificate'
+alias kdsc='kubectl describe certificate'
+alias kec='kubectl edit certificate'
+alias kgc='kubectl get certificate'
+alias kgca='kubectl get certificate -A'
+alias kgcj='kubectl get certificate -o json'
+alias kgcy='kubectl get certificate -o yaml'
+alias kpc='kubectl patch certificate'
+alias kwc='kubectl watch certificate'
+alias kwca='kubectl watch certificate -A'
+
+# certificaterequest
+alias kdcr='kubectl delete certificaterequest'
+alias kdscr='kubectl describe certificaterequest'
+alias kecr='kubectl edit certificaterequest'
+alias kgcr='kubectl get certificaterequest'
+alias kgcra='kubectl get certificaterequest -A'
+alias kgcrj='kubectl get certificatrerequest -o json'
+alias kgcry='kubectl get certificaterequest -o yaml'
+alias kpcr='kubectl patch certificaterequest'
+alias kwcr='kubectl watch certificaterequest'
+alias kwcra='kubectl watch certificaterequest -A'
+
+# certificatesigningrequests
+alias kgcsr='kubectl get certificatesigningrequests'
+
+# clustercompliancereports
+alias kdccr='kubectl delete clustercompliancereports'
+alias kdsccr='kubectl describe clustercompliancereports'
+alias keccr='kubectl edit clustercompliancereports'
+alias kgccr='kubectl get clustercompliancereports'
+alias kgccry='kubectl get clustercompliancereports -o yaml'
+alias kpccr='kubectl patch clustercompliancereports'
+alias kwccr='kubectl watch clustercompliancereports'
+
+# clusterconfigauditreports
+alias kdccar='kubectl delete clusterconfigauditreports'
+alias kdsccar='kubectl describe clusterconfigauditreports'
+alias keccar='kubectl edit clusterconfigauditreports'
+alias kgccar='kubectl get clusterconfigauditreports'
+alias kgccary='kubectl get clusterconfigauditreports -o yaml'
+alias kpccar='kubectl patch clusterconfigauditreports'
+alias kwccar='kubectl watch clusterconfigauditreports'
+
+# clusterinfraassessmentsreports
+alias kdciar='kubectl delete clusterinfraassessmentsreports'
+alias kdsciar='kubectl describe clusterinfraassessmentsreports'
+alias keciar='kubectl edit clusterinfraassessmentsreports'
+alias kgciar='kubectl get clusterinfraassessmentsreports'
+alias kgciary='kubectl get clusterinfraassessmentsreports -o yaml'
+alias kpciar='kubectl patch clusterinfraassessmentsreports'
+alias kwciar='kubectl watch clusterinfraassessmentsreports'
+
+# clusterrbacassessmentreports
+alias kdcrar='kubectl delete clusterrbacassessmentreports'
+alias kdscrar='kubectl describe clusterrbacassessmentreports'
+alias kecrar='kubectl edit clusterrbacassessmentreports'
+alias kgcrar='kubectl get clusterrbacassessmentreports'
+alias kgcrary='kubectl get clusterrbacassessmentreports -o yaml'
+alias kpcrar='kubectl patch clusterrbacassessmentreports'
+alias kwcrar='kubectl watch clusterrbacassessmentreports'
+
+# clusterrolebindings
+alias kdcrb='kubectl delete clusterrolebindings'
+alias kdscrb='kubectl describe clusterrolebindings'
+alias kecrb='kubectl edit clusterrolebindings'
+alias kgcrb='kubectl get clusterrolebindings'
+alias kgcrby='kubectl get clusterrolebindings -o yaml'
+alias kpcrb='kubectl patch clusterrolebindings'
+alias kwcrb='kubectl watch clusterrolebindings'
+
+# clusterroles
+alias kdcr='kubectl delete clusterroles'
+alias kdscr='kubectl describe clusterroles'
+alias kecr='kubectl edit clusterroles'
+alias kgcr='kubectl get clusterroles'
+alias kgcry='kubectl get clusterroles -o yaml'
+alias kpcr='kubectl patch clusterroles'
+alias kqcr='kubectl watch clusteroles'
+
+# clustersbomreports
+alias kdcsbomr='kubectl delete clustersbomreports'
+alias kdscsbomr='kubectl describe clustersbomreports'
+alias kecsbomr='kubectl edit clustersbomreports'
+alias kgcsbomr='kubectl get clustersbomreports'
+alias kgcsbomry='kubectl get clustersbomreports -o yaml'
+alias kpcsbomr='kubectl patch clustersbomreports'
+alias kwcsbomr='kubectl watch clustersbomreports'
+
+# clustervulnerabilityreports
+alias kdcvr='kubectl delete clustervulnerabilityreports'
+alias kdscvr='kubectl describe clustervulnerabilityreports'
+alias kecvr='kubectl edit clustervulnerabilityreports'
+alias kgcvr='kubectl get clustervulnerabilityreports'
+alias kgcvry='kubectl get clustervulnerabilityreports -o yaml'
+alias kpcvr='kubectl patch clustervulnerabilityreports'
+alias kwcvr='kubectl watch clustervulnerabilityreports'
+
+# componentstatuses
+alias kgcs='kubectl get componentstatus'
+
+# configauditreports
+alias kdcar='kubectl delete configauditreports'
+alias kdscar='kubectl describe configauditreports'
+alias kecar='kubectl edit configauditreports'
+alias kgcar='kubectl get configauditreports'
+alias kgcara='kubectl get configauditreports -A'
+alias kgcary='kubectl get configauditreports -o yaml'
+alias kwcar='kubectl watch configauditreports'
+alias kwcara='kubectl watch configauditreports -A'
+
+# configmaps
+alias kdcm='kubectl delete configmaps'
+alias kdscm='kubectl describe configmaps'
+alias kecm='kubectl edit configmaps'
+alias kgcm='kubectl get configmaps'
+alias kgcma='kubectl get configmaps -A'
+alias kgcmy='kubectl get configmaps -o yaml'
+alias kwcm='kubectl watch configmaps'
+alias kwcma='kubectl watch configmaps -A'
+
+# ConstraintTemplate
+alias kdct='kubectl delete constrainttemplate'
+alias kdsct='kubectl describe constrainttemplate'
+alias kect='kubectl edit constrainttemplate'
+alias kgct='kubectl get constrainttemplate'
+alias kgcty='kubectl get constrainttemplate -o yaml'
+alias kwct='kubectl watch constrainttemplate'
+
+# controllerrevisions
+alias kdcrv='kubectl delete controllerrevisions'
+alias kdscrv='kubectl describe controllerrevisions'
+alias kecrv='kubectl edit controllerrevisions'
+alias kgcrv='kubectl get controllerrevisions'
+alias kwcrv='kubectl watch controllerrevisions'
+
+# Cronjobs
+alias kdcj='kubectl delete cronjobs'
+alias kdscj='kubectl describe cronjobs'
+alias kecj='kubectl edit cronjobs'
+alias kgcj='kubectl get cronjobs'
+alias kgcjy='kubectl get cronjobs -o yaml'
+alias kwcj='kubectl watch cronjobs'
+
+# customresourcedefinition
+alias kdcrd='kubectl delete customresourcedefinition'
+alias kdscrd='kubectl describe customresourcedefinition'
+alias kecrd='kubectl edit customresourcedefinition'
+alias kgcrd='kubectl get customresourcedefinition'
+alias kgcrdy='kubectl get customresourcedefinition -o yaml'
+alias kwcrd='kubectl watch customresourcedefinition'
+
+kgcrdypp () {
+  kubectl get customresourcedefinition $1 -o yaml | bat --file-name "$1.yaml"
+}
+
+# daemonsets
+alias kdds='kubectl delete daemonsets'
+alias kdsds='kubectl describe daemonsets'
+alias keds='kubectl edit daemonsets'
+alias kgds='kubectl get daemonsets'
+alias kgdsa='kubectl get daemonsets -A'
+alias kgdsy='kubectl get daemonsets -o yaml'
+alias kwds='kubectl watch daemonsets'
+alias kwdsa='kubectl watch daemonsets -A'
+
+# Deployments
+alias kdd='kubectl delete deployment'
+alias kdsd='kubectl describe deployments'
+alias ked='kubectl edit deployments'
+alias kgd='kubectl get deployments'
+alias kgda='kubectl get deployments -A'
+alias kgdy='kubectl get deployments -o yaml'
+alias kwd='kubectl watch deployments'
+alias kwda='kubectl watch deployments -A'
+
+# endpoints
+alias kgep='kubectl get endpoints'
+
+# events
+alias kgev='kubectl get events'
+
+# ExternalSecret
+alias kdes='kubectl delete externalsecret'
+alias kdses='kubectl describe externalsecret'
+alias kees='kubectl edit externalsecret'
+alias kges='kubectl get externalsecret'
+alias kgesa='kubectl get externalsecret -A'
+alias kgesj='kubectl get externalsecret -o json'
+alias kgesy='kubectl get externalsecret -o yaml'
+alias kwes='kubectl watch externalsecret'
+alias kwesa='kubectl watch externalsecret -A'
+
+# exposedsecretreports
+alias kdesr='kubectl delete exposedsecretreports'
+alias kdsesr='kubectl describe exposedsecretreports'
+alias keesr='kubectl edit exposedsecretreports'
+alias kgesr='kubectl get exposedsecretreports'
+alias kgesra='kubectl get exposedsecretreports -A'
+alias kgesry='kubectl get exposedsecretreports -o yaml'
+alias kgesrj='kubectl get exposedsecretreports -o json'
+alias kpesr='kubectl patch exposedsecretreports'
+alias kwesr='kubectl watch exposedsecretreports'
+alias kwesra='kubectl watch exposedsecretreports -A'
+
+# from file
+alias kaf='kubectl apply -f'
+alias kcf='kubectl create -f'
+alias kdf='kubectl delete -f'
+alias kef='kubectl edit -f'
+alias kdsf='kubectl describe -f'
+alias kgf='kubectl get -f'
+
+# GitRepository
+alias kdgr='kubectl delete GitRepository'
+alias kdsgr='kubectl describe GitRepository'
+alias kegr='kubectl edit GitRepository'
+alias kggr='kubectl get GitRepository'
+alias kggra='kubectl get GitRepository -A'
+alias kggry='kubectl get GitRepository -o yaml'
+alias kwgr='kubectl watch GitRepository'
+alias kwgra='kubectl watch GitRepository -A'
+
+# HelmRelease
+alias kdhr='kubectl delete HelmRelease'
+alias kdshr='kubectl describe HelmRelease'
+alias kehr='kubectl edit HelmRelease'
+alias kghr='kubectl get HelmRelease'
+alias kghra='kubectl get HelmRelease -A'
+alias kghry='kubectl get HelmRelease -o yaml'
+alias kwhr='kubectl watch HelmRelease'
+alias kwhra='kubectl watch HelmRelease -A'
+
+# HelmRepository
+alias kdhrepo='kubectl delete HelmRepository'
+alias kdshrepo='kubectl describe HelmRepository'
+alias kehrepo='kubectl edit HelmRepository'
+alias kghrepo='kubectl get HelmRepository'
+alias kghrepoa='kubectl get HelmRepository -A'
+alias kghrepoy='kubectl get HelmRepository -o yaml'
+alias kwhrepo='kubectl watch HelmRepository'
+alias kwhrepoa='kubectl watch HelmRepository -A'
+
+# horizontalpodautoscalers
+alias kdhpa='kubectl delete horizontalpodautoscalers'
+alias kdshpa='kubectl describe horizontalpodautoscalers'
+alias kehpa='kubectl edit horizontalpodautoscalers'
+alias kghpa='kubectl get horizontalpodautoscalers'
+alias kghpaa='kubectl get horizontalpodautoscalers -A'
+alias kghpaj='kubectl get horizontalpodautoscalers -o json'
+alias kghpay='kubectl get horizontalpodautoscalers -o yaml'
+alias kwhpa='kubectl watch horizontalpodautoscalers'
+alias kwhpaa='kubectl watch horizontalpodautoscalers -A'
+
+# ImagePolicy
+alias kdip='kubectl delete imagepolicy'
+alias kdsip='kubectl describe imagepolicy'
+alias keip='kubectl edit imagepolicy'
+alias kgip='kubectl get imagepolicy'
+alias kgipa='kubectl get imagepolicy -A'
+alias kgipj='kubectl get imagepolicy -o json'
+alias kgipy='kubectl get imagepolicy -o yaml'
+alias kwip='kubectl watch imagepolicy'
+alias kwipa-'kubectl watch imagepolicy -A'
+
+# ImageRepository
+alias kdir='kubectl delete imagerepository'
+alias kdsir='kubectl describe imagerepository'
+alias keir='kubectl edit imagerepository'
+alias kgir='kubectl get imagerepository'
+alias kgira='kubectl get imagerepository -A'
+alias kgirj='kubectl get imagerepository -o json'
+alias kgiry='kubectl get imagerepository -o yaml'
+alias kwir='kubectl watch imagerepository'
+alias kwira='kubectl watch imagerepository -A'
+
+# ImageUpdateAutomation
+alias kdiua='kubectl delete imageupdateautomation'
+alias kdsiua='kubectl describe imageupdateautomation'
+alias keiua='kubectl edit imageupdateautomation'
+alias kgiua='kubectl get imageupdateautomation'
+alias kgiuaa='kubectl get imageupdateautomation -A'
+alias kgiuaj='kubectl get imageupdateautomation -o json'
+alias kgiuay='kubectl get imageupdateautomation -o yaml'
+alias kwiua='kubectl watch imageupdateautomation'
+alias kwiuaa'kubectl watch imageupdateautomation -A'
+
+# infraassessmentreports
+alias kdiar='kubectl delete infraassessmentreports'
+alias kdsiar='kubectl describe infraassessmentreports'
+alias keiar='kubectl edit infraassessmentreports'
+alias kgiar='kubectl get infraassessmentreports'
+alias kgiara='kubectl get infraassessmentreports -A'
+alias kgiarj='kubectl get infraassessmentreports -o json'
+alias kgiary='kubecetl get infraassessmentreports -o yaml'
+alias kwiar='kubectl watch infraassessmentreports'
+alias kwiara='kubectl watch infraassessmentreports -A'
+
+# Ingress
+alias kdi='kubectl delete ingress'
+alias kdsi='kubectl describe ingress'
+alias kei='kubectl edit ingress'
+alias kgi='kubectl get ingress'
+alias kgia='kubectl get ingress -A'
+alias kgiy='kubectl get ingress -o yaml'
+alias kwi='kubectl watch ingress'
+alias kwia='kubectl watch ingress -A'
+
+# Ingress Class
+alias kdic='kubectl delete ingressclass'
+alias kdsic='kubectl describe ingressclass'
+alias keic='kubectl edit ingressclass'
+alias kgic='kubectl get ingressclass'
+alias kgica='kubectl get ingressclass -A'
+alias kgicy='kubectl get ingressclass -o yaml'
+alias kwic='kubectl watch ingressclass'
+alias kwica='kubectl watch ingressclass -A'
+
+# Jobs
+alias kdj='kubectl delete job'
+alias kdsj='kubectl describe jobs'
+alias kej='kubectl edit jobs'
+alias kgj='kubectl get jobs'
+alias kgjy='kubectl get jobs -o yaml'
+alias kwj='kubectl watch jobs'
+
+# Kustomization
+alias kdk='kubectl delete Kustomization'
+alias kdsk='kubectl describe Kustomization'
+alias kek='kubectl edit Kustomization'
+alias kgk='kubectl get Kustomization'
+alias kgka='kubectl get Kustomization -A'
+alias kgky='kubectl get Kustomization -o yaml'
+alias kwk='kubectl watch Kustomization'
+alias kwka='kubectl watch Kustomization -A'
+
+# limitranges
+alias kdlr='kubectl delete limitranges'
+alias kdslr='kubectl describe limitranges'
+alias kelr='kubectl edit limitranges'
+alias kglr='kubectl get limitranges'
+alias kglry='kubectl get limitranges -o yaml'
+alias kwlr='kubectl watch limitranges'
+
+# MutatingWebhookConfiguration
+alias kdmwc='kubectl delete mutatingwebhookconfiguration'
+alias kdsmwc='kubectl describe mutatingwebhookconfiguration'
+alias kemwc='kubectl edit mutatingwebhookconfiguration'
+alias kgmwc='kubectl get mutatingwebhookconfiguration'
+alias kgmwcy='kubectl get mutatingwebhookconfiguration -o yaml'
+
+# Namespaces
+alias kdns='kubectl delete namespaces'
+alias kdsns='kubectl describe namespaces'
+alias kens='kubectl edit namespaces'
+alias kgns='kubectl get namespaces'
+alias kgnsy='kubectl get namespaces -o yaml'
+alias kns='kubie ns'
+alias kwns='kubectl watch namespaces'
+
+# networkpolicies
+alias kdnp='kubectl delete networkpolicies'
+alias kdsnp='kubectl describe networkpolicies'
+alias kenp='kubectl edit networkpolicies'
+alias kgnp='kubectl get networkpolicies'
+alias kgnpy='kubectl get networkpolicies -o yaml'
+
+# Nodes
+alias kdsn='kubectl describe nodes'
+alias kdn='kubectl delete nodes'
+alias ken='kubectl edit nodes'
+alias kgn='kubectl get nodes'
+alias kgny='kubectl get nodes -o yaml'
+alias ktn='kubectl top node'
+alias kwn='kubectl watch nodes'
+
+# persistentvolumeclaims
+alias kdpvc='kubectl delete persistentvolumeclaims'
+alias kdspvc='kubectl describe persistentvolumeclaims'
+alias kepvc='kubectl edit persistentvolumeclaims'
+alias kgpvc='kubectl get persistentvolumeclaims'
+alias kgpvca='kubectl get persistentvolumeclaims -A'
+alias kgpvcy='kubectl get persistentvolumeclaims -o yaml'
+alias kwpvc='kubectl watch persistentvolumeclaims'
+alias kwpvca='kubectl watch persistentvolumeclaims -A'
+
+# persistentvolumes
+alias kdpv='kubectl delete persistentvolumes'
+alias kdspv='kubectl describe persistentvolumes'
+alias kepv='kubectl edit persistentvolumes'
+alias kgpv='kubectl get persistentvolumes'
+alias kgpvy='kubectl get persistentvolumes -o yaml'
+alias kwpv='kubectl watch persistentvolumes'
+alias kwpva='kubectl watch persistentvolumes -A'
+
+# poddisruptionbudgets
+alias kdpdb='kubectl delete poddisruptionbudgets'
+alias kepdb='kubectl edit poddisruptionbudgets'
+alias kgpdb='kubectl get poddisruptionbudgets'
+alias kgpdba='kubectl get poddisruptionbudgets -A'
+alias kgpdby='kubectl get poddisruptionbudgets -o yaml'
+alias kwpdb='kubectl watch poddisruptionbudgets'
+alias kwpdba='kubectl watch poddisruptionbudgets -A'
+
+# podpreset
+alias kgpp='kubectl get podpreset'
+
+# Pods
+alias kdp='kubectl delete pod'
+alias kdsp='kubectl describe pods'
+alias kep='kubectl edit pods'
+alias kgp='kubectl get pods'
+alias kgpa='kubectl get pods -A'
+alias kgpw='kubectl get pods -o wide'
+alias kgpy='kubectl get pods -o yaml'
+alias ktp='kubectl top pod'
+alias kwp='kubectl watch pods'
+alias kwpa='kubectl watch pods -A'
+
+# Get pods pending in current namespace
+alias kgpp='kubectl get pods --selector=status=Pending'
+
+# Get all pods pending
+alias kgppa='kubectl get pods -A --selector=status=Pending'
+
+# Get all containers in a given pod
+kgpc () {
+  kubectl get pods $1 -o jsonpath='{.spec.containers[*].name}'
+}
+
+# Get IPs for all pods
+kgpip () {
+  kubectl get pod -A -o wide -o=custom-columns=NAME:.metadata.name,IP:.status.podIP
+}
+
+# Get all pods on a given node
+kgpn () {
+  kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=$1
+}
+
+# Watch all pods on a given node
+kwpn () {
+  kubectl watch pods --all-namespaces -o wide --field-selector spec.nodeName=$1
+}
+
+# Get all pods sorted by node
+kgpsn () {
+  kubectl get pods -A -o wide -o=custom-columns=NAMESPACE:.metadata.namespace,NAME:.metadata.name,NODE:spec.nodeName --sort-by=.spec.nodeName
+}
+
+# Get pod capacity on a given node
+kgnpc () {
+  kubectl get nodes $1 -o json | jq -r '.status.capacity.pods'
+}
+
+# Get pod capacity on all nodes
+kgnpca () {
+  kubectl get nodes -o=custom-columns=NAME:.metadata.name | gsed 1d | xargs -I{} sh -c "echo {} &&  kubectl get nodes {} -o json | jq -r '.status.capacity.pods'"
+}
+
+# Get all container images used in a cluster
+kgci () {
+  kubectl get pods --all-namespaces -o jsonpath="{.items[*].spec['initContainers', 'containers'][*].image}" | tr -s '[[:space:]]' '\n' | sort | uniq
+}
+
+# Get resources for a give pod OR get resources for all pods in the current namespace
+kgpr () {
+  if [ -z "$1" ]
+  then  
+    kubectl get pods $1 -o json | jq '.spec.containers[] | {name,resources}'
+  else
+    kubectl get pods -o json | jq '.spec.containers[] | {name,resources}'
+  fi
+}
+
+# podsecuritypolicies
+alias kpsp='kubectl get podsecuritypolicies'
+
+# podtemplates
+alias kpt='kubectl get podtemplates'
+
+# rbacassessmentreports
+alias kdrar='kubectl delete rbacassessmentreports'
+alias kdsrar='kubectl describe rbacassessmentreports'
+alias kerar='kubectl edit rbacassessmentreports'
+alias kgrar='kubectl get rbacassessmentreports'
+alias kgrara='kubecetl get rbacassessmentreports -A'
+alias kgrary='kubectl get rbacassessmentreports -o yaml'
+alias kprar='kubectl patch rbacassessmentreports'
+alias kwrar='kubectl watch rbacassessmentreports'
+alias kwrara='kubectl watch rbacassessmentreports -A'
+
+# replicasets
+alias kdrs='kubectl delete replicasets'
+alias kers='kubectl edit replicasets'
+alias kgrs='kubectl get replicasets'
+alias kgrsa='kubectl get replicasets -A'
+alias kgrsy='kubectl get replicasets -o yaml'
+alias kprs='kubectl patch replicasets'
+alias kwrs='kubectl watch replicasets'
+alias kwrsa='kubectl watc replicasets -A'
+
+# replicationcontrollers
+alias kdrc='kubectl delete replicationcontrollers'
+alias kerc='kubectl edit replicationcontrollers'
+alias kgrc='kubectl get replicationcontrollers'
+alias kgrca='kubectl get replicationcontrollers -A'
+alias kgrcy='kubectl get replicationcontrollers -o yaml'
+
+# resourcequotas
+alias kgrq='kubectl get resourcequotas'
+
+# rolebindings
+alias kgrb='kubectl get rolebindings'
+alias kwrb='kubectl watch rolebindings'
+
+# roles
+alias kgr='kubectl get roles'
+alias kwr='kubectl watch roles'
+
+# sbomreports
+alias kdsbomr='kubectl delete sbomreports'
+alias kdssbomr='kubectl describe sbomreports'
+alias kesbomr='kubectl edit sbomreports'
+alias kgsbomr='kubectl get sbomreports'
+alias kgsbomra='kubectl get sbomreports -A'
+alias kgsbomry='kubectl get sbomreports -o yaml'
+alias kpsbomr='kubectl patch sbomreports'
+alias kwsbomr='kubectl watch sbomreports'
+alias kwsbomra='kubectl watch sbomreports -A'
+
+# secrets
+alias kacidsec='kubectl auth can-i delete secrets'
+alias kacidssec='kubectl auth can-i describe secrets'
+alias kaciesec='kubectl auth can-i edit secrets'
+alias kacigsec='kubectl auth can-i get secrets'
+alias kdsec='kubectl delete secrets'
+alias kdssec='kubectl describe secrets'
+alias kesec='kubectl edit secrets'
+alias kgasec='get_cluster_resources secrets'
+alias kgsec='kubectl get secrets'
+alias kgsecy='kubectl get secrets -o yaml'
+alias kgseca='kubectl get secrets -A'
+
+# move secret to new namespace
+kms () {
+  kubectl get secrets $1 -o json --namespace $2 | jq '.items[].metadata.namespace = "$3"' | kubectl create -f  -
+}
+
+# SecretStore
+alias kdss='kubectl delete secretstore'
+alias kdsss='kubectl describe secretstore'
+alias kess='kubectl edit secretstore'
+alias kgss='kubectl get secretstore'
+alias kgssa='kubectl get secretstore -A'
+alias kgssj='kubectl get secretstore -o json'
+alias kgssy='kubectl get secretstore -o yaml'
+alias kwss='kubectl watch secretstore'
+alias kwssa='kubectl wartch sectretstore -A'
+
+# serviceaccounts
+alias kdsa='kubectl delete serviceaccounts'
+alias kdssa='kubectl describe serviceaccounts'
+alias kesa='kubectl edit serviceaccounts'
+alias kgsa='kubectl get serviceaccounts'
+alias kgsaa='kubectl get serviceaccounts -A'
+alias kgsay='kubectl get serviceaccounts -o json'
+alias kgsay='kubectl get serviceaccounts -o yaml'
+alias kwsa='kubectl watch serviceaccounts'
+alias kwsaa='kubectl watch serviceaccounts -A'
+
+# Services
+# kds is used for kubectl describe
+# alias kds='kubectl delete services'
+alias kdss='kubectl describe services'
+alias kes='kubectl edit services'
+alias kgs='kubectl get services'
+alias kgsy='kubectl get services -o yaml'
+alias kws='kubectl watch services'
+
+# statefulsets
+alias kdss='kubectl delete statefulset'
+alias kdsss='kubectl describe statefulset'
+alias kess='kubectl edit statefulset'
+alias kgss='kubectl get statefulset'
+alias kgssa='kubectl get statefulset -A'
+alias kgssy='kubectl get statefulset -o yaml'
+alias kwss='kubectl watch statefulset'
+alias kwssa='kubectl watch statefulset -A'
+
+# storageclass
+alias kdsc='kubectl delete storageclass'
+alias kdssc='kubectl describe storageclass'
+alias kesc='kubectl edit storageclass'
+alias kgsc='kubectl get storageclass'
+alias kgscy='kubectl get storageclass -o yaml'
+alias kwsc='kubectl watch storageclass'
+
+# trivy
+alias kgtcrd="kubectl get crd -o custom-columns='NAME:.metadata.name' | grep 'aquasec' | gsed 's/[.].*$//'"
+alias kgt="kubectl get crd -o custom-columns='NAME:.metadata.name' | grep 'aquasec' | gsed 's/[.].*$//' | xargs -I{} sh -c 'echo {} && kubectl get {}'"
+alias kgta="kubectl get crd -o custom-columns='NAME:.metadata.name' | grep 'aquasec' | gsed 's/[.].*$//' | xargs -I{} sh -c 'echo {} && kubectl get -A {}'"
+
+# verticalpodautoscaler
+alias kdvpa='kubectl delete verticalpodautoscaler'
+alias kdsvpa='kubectl describe verticalpodautoscaler'
+alias kevpa='kubectl edit verticalpodautoscaler'
+alias kgvpa='kubectl get verticalpodautoscaler'
+alias kgvpaa='kubectl get verticalpodautoscaler -A'
+alias kgvpay='kubectl get verticalpodautoscaler -o yaml'
+alias kwvpa='kubectl watch verticalpodautoscaler'
+alias kwvpaa='kubectl watch verticalpodautoscaler -A'
+
+# vulernabilityreport
+alias kdvr='kubectl delete vulnerabilityreport'
+alias kdsvr='kubectl describe vulnerabilityreport'
+alias kevr='kubectl edit vulnerabilityreport'
+alias kgvr='kubectl get vulnerabilityreport'
+alias kgvra='kubectl get vulnerabilityreport -A'
+alias kgvrj='kubectl get vulnerabilityreport -o json'
+alias kgvry='kubectl get vulnerabilityreport -o yaml'
+alias kwvr='kubectl watch vulnerabilityreport'
+alias kwvra='kubectl watch vulnerabilityreport -A'
+
+kgvrpp () {
+  kubectl get vulnerabilityreport $@ -o json | jq -r '.report.summary | {critical: .criticalCount, high: .highCount, medium: .mediumCount, low: .lowCount, unknown: .unknownCount}'
+}
+
+# Execute a command in a specified pod, default drops user into the shell
+alias keit='kubectl exec -it --'
+
+kcexec () {
+  kubectl exec -it $1 -- ${2:-bash}
+}
+kexec () {
+  kubectl exec -it $1 -- ${2:-bash}
+}
+
+# kubectl patch finalizer
+kpf () {
+  kubectl patch $1 $2 -p '{"metadata":{"finalizers":null}}' --type=merge
+}
+
+# TODO: kpf name conflict from sourcing autocomplete
+# kpf () {
+#   kubectl port-forward $1 9990:9990 --namespace=${2}
+# }
+
+# Get all resources (e.g. pod) in all namespaces
+get_cluster_resources () {
+  kubectl get $1 -o wide --all-namespaces ${@:2}
+}
+
+# TODO: Go through all resources.
+# Find a resource (e.g. a pod by name)
+kfind () {
+
+  # kubectl get all --all-namespaces | grep -i -E --color=always "${@}|$"
+  sed 1d $KRESOURCES | while read resource; do
+    kubectl get $resource --all-namespaces -o wide 2>/dev/null | \
+      $KALIAS/src/kfind.awk -v regex="${1}" -v resourcetype="${resource}"
+  done
+
+#   local custom=$(kubectl get customresourcedefinition)
+#   echo $custom | while read resource; do
+#     kubectl get "${resource}" --all-namespaces -o wide | \
+#       $KALIAS/src/kfind.awk -v regex="${1}" -v resourcetype="${resource}"
+  # done
+}
+
+# Start a restart on pods, will follow the rolling release policy
+krd () {
+  kubectl patch deployment ${1} -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\"}}}}}"
+}
+
+# Search pods using regular expression
+kpfind () {
+
+  column -t <<< $(kubectl get pods --all-namespaces -o wide | \
+    $KALIAS/src/kpfind.awk -v regex="${1}")
+
+}
+
+# Search pods using regular expression
+kstatus () {
+
+  # Structured after stack exchange
+  iPOSITIONAL=()
+  while [[ $# -gt 0 ]]
+  do
+  key="$1"
+
+  case $key in
+    -C) 
+      kpfind Completed
+      shift
+      ;;
+    -c) 
+      kpfind CrashLoopBackOff
+      shift
+      ;;
+    -f) 
+      kpfind Failed
+      shift
+      ;;
+    -p) 
+      kpfind Pending
+      shift
+      ;;
+    -r) 
+      kpfind Running
+      shift
+      ;;
+    -s) 
+      kpfind Succeded
+      shift
+      ;;
+    -u) 
+      kpfind Unknown
+      shift
+      ;;
+    -h) 
+      echo "Usage: kstatus -[C|c|f|p|r|s|u]"
+      echo "  -C                           Completed"
+      echo "  -c                           CrashLoopBackOff"
+      echo "  -f                           Failed"
+      echo "  -p                           Pending"
+      echo "  -r                           Running"
+      echo "  -s                           Succeeded"
+      echo "  -u                           Unknown"
+      shift
+      ;;
+  esac
+  done
+  set -- "${POSITIONAL[@]}" # restore positional parameters
+
+}
+
+
+# Display help
+khelp () {
+
+case $1 in
+  commands|cmd|usage)
+    cat $KALIAS/docs/usage
+  ;;
+  resources|res)
+    cat $KALIAS/docs/resources
+    kubectl get customresourcedefinition | awk 'NR>1 {print $1}'
+  ;;
+  *)
+    echo "usage: khelp (cmd|res)"
+  ;;
+esac
+
+}
+
+# Get the pod names (just the names) of all pods in a namespace.
+kgpns () {
+  echo $(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{" "}}{{end}}')
+}
+
+# Delete all pods within a namespace.
+kdap () {
+
+  if [ $SHELL_NAME = zsh ]; then
+    read "kdelete?This will attempt to delete all pods within the namespace. Do you want to continue?(y/N) "
+  else
+    read -p "This will attempt to delete all pods within the namespace. Do you want to continue?(y/N) " kdelete
+  fi
+
+  if [[ "${kdelete}" =~ ^[yY]$ ]]; then
+    kubectl delete pods $(kgpns)
+  fi
+}
+
+# Drain node
+kdrain () {
+
+  if [ $SHELL_NAME = zsh ]; then
+    read "kdrainnode? This will drain the node ${1}, delete local data, and ignore daemonsets. Do you want to continue?(y/N) "
+  else
+    read -p "This will drain the node ${1}, delete local data, and ignore daemonsets. Do you want to continue?(y/N) " kdrainnode
+  fi
+
+  if [[ "${kdrainnode}" =~ ^[yY]$ ]]; then
+    kubectl drain ${1} --delete-local-data --force --ignore-daemonsets
+  fi
+}
+
+# Intended to be a private function
+_cp_config_sed_config () {
+  local resource=${1}
+  local name=${2}
+  cp ${KALIAS}/include/${1}.yaml ${name}-${resource}.yaml
+  sed -i "s/CHANGEME/${2}/g" ${name}-${resource}.yaml
+}
+
+# Create config
+kcon () {
+  local configPath=$KALIAS/include/
+  # Structured after stack exchange
+  iPOSITIONAL=()
+  while [[ $# -gt 0 ]]
+  do
+  key="$1"
+
+  case $key in
+    -a)
+      local resources=(configmap deployment ingress namespace service)
+      for resource in $resources; do
+        _cp_config_sed_config $resource ${2}
+      done
+      shift
+      shift
+      ;;
+    -c)
+      _cp_config_sed_config configmap ${2}
+      shift
+      shift
+      ;;
+    -d)
+      _cp_config_sed_config deployment ${2}
+      shift
+      shift
+      ;;
+    -i)
+      _cp_config_sed_config ingress ${2}
+      shift
+      shift
+      ;;
+    -n)
+      _cp_config_sed_config namespace ${2}
+      shift
+      shift
+      ;;
+    -s)
+      _cp_config_sed_config service ${2}
+      shift
+      shift
+      ;;
+    -h)
+      echo "Usage: kcon -[c|d|i|n|s] NAME"
+      echo "  -a                           Create all template files"
+      echo "  -c                           Create configmap template"
+      echo "  -d                           Create deployment template"
+      echo "  -h                           Display usage"
+      echo "  -i                           Create ingress template"
+      echo "  -n                           Create namespace template"
+      echo "  -s                           Create service template"
+
+      shift # past argument
+      ;;
+  esac
+  done
+  set -- "${POSITIONAL[@]}" # restore positional parameters
+}
+
+# plugins
+
+alias kpl='kubectl plugin list'
+
+alias kai='kubectl ai'
+alias kdatt='kubectl datree test'
+alias kdatta='kubectl datree test -- --all'
+alias kdoc='kubectl doctor'
+alias kga='kubectl get-all --exclude='
+alias kjan='kubectl janitor'
+alias kko='kubectl kopilot'
+alias kscan='kubectl kubescape scan --verbose'
+alias kr='kubectl reap'
+alias kt='kubectl top'
+alias kw='kubectl watch'
+alias kc='kube-capacity'
+
+alias kcno='kube-capacity -c | grep --color=never -E "NODE| 0m| 0Mi" | gsed -e "s/NODE//" -e "s/^.*.ec2.internal//" -e "s/NAMESPACE//" -e "s/kube-system//" -e "s/^[ \t]*//" | grep -v "*"'
+
+add-cluster () {
+  aws eks update-kubeconfig --kubeconfig "$HOME/.kube/config" --region us-east-1 --name $1 && mv ~/.kube/config ~/.kube/configs/$1.yaml > /dev/null
+  echo "Added $1"
+}
+
+list-clusters () {
+  ls -1 ~/.kube/configs | sed -e 's/\.yaml$//'
+}
+
+############################################
+#  __  __ _       _ _          _           #
+# |  \/  (_)_ __ (_) | ___   _| |__   ___  #
+# | |\/| | | '_ \| | |/ / | | | '_ \ / _ \ #
+# | |  | | | | | | |   <| |_| | |_) |  __/ #
+# |_|  |_|_|_| |_|_|_|\_\\__,_|_.__/ \___| #
+############################################
+
+alias m=minikube
+alias mstrt="minikube start"
+alias mstat="minikube stats"
+alias mstp="minikube stop"
+alias md="minikube delete"
+
+alias mkdir="mkdir -p"
+
+######################################################
+#  _____                    __                       #
+# |_   _|__ _ __ _ __ __ _ / _| ___  _ __ _ __ ___   #
+#   | |/ _ \ '__| '__/ _` | |_ / _ \| '__| '_ ` _ \  #
+#   | |  __/ |  | | | (_| |  _| (_) | |  | | | | | | #
+#   |_|\___|_|  |_|  \__,_|_|  \___/|_|  |_| |_| |_| #
+######################################################
+
+function tf_prompt_info() {
+    # dont show 'default' workspace in home dir
+    [[ "$PWD" == ~ ]] && return
+    # check if in terraform dir
+    if [ -d .terraform ]; then
+      workspace=$(terraform workspace show 2> /dev/null) || return
+      echo "[${workspace}]"
+    fi
+}
+
+alias tf='terraform'
+
+alias tfi='tf init'
+
+alias tfp='tf plan'
+alias tfa='tf apply'
+alias tfd='tf destroy'
+
+alias tfip='tfi && tfp'
+alias tfia='tfi && tfa'
+alias tfid='tfi && tfd'
+
+alias tfc='tf console'
+alias tfg='tf graph'
+alias tfget='tf get'
+alias tfimp='tf import'
+alias tfo='tf output'
+alias tfprov='tf providers'
+alias tfpp='tf push'
+alias tfr='tf refresh'
+alias tfs='tf show'
+alias tfst='tf state'
+alias tft='tf taint'
+alias tfunt='tf untaint'
+alias tfv='tf validate'
+alias tfver='tf version'
+alias tfw='tf workspace'
+
+# VAULT
+
+alias v='vault'
+alias vl='vault login -method=ldap username=starlight.romero -format=yaml'
+alias vr='vault read'
+alias vls='vault kv list'
+alias vg='vault kv get'
+alias vput='vault kv put'
+alias vp='vault kv patch'
+alias vd='vault kv delete'
+alias vud='vault kv undelete'
+alias vdes='vault kv destroy'
+
+# WAYPOINT
+
+alias wp='waypoint'
+alias wpb='waypoint build'
+alias wpd='waypoint deploy'
+alias wpi='waypoint init'
+alias wpinst='waypoint install'
+alias wpl='waypoint login'
+alias wpr='waypoint release'
+alias wpst='waypoint status'
+alias wpup='waypoint up'
+
+alias wpctx='waypoint context'
+alias wpctxc='waypoint context create'
+alias wpctxcl='waypoint context clear'
+alias wpctxd='waypoint context delete'
+alias wpctxda='waypoint context delete -all'
+alias wpctxls='waypoint context list'
+alias wpctxs='waypoint context set'
+alias wpctxu='waypoint context use'
+
+awsdecode () {
+  aws sts decode-authorization-message --encoded-message $1 | gsed -z 's/\\n/\n/g' | jq -r '.DecodedMessage' | gsed -z 's/\\//g' | jq '.'
+}
+
+gitlab () {
+  python "$HOME/code/scripts/gitlab"
+}
+
+kdebug () {
+  kubectl run debug -i --rm --tty --image nicolaka/netshoot --restart=Never
+}
+
+awsenv () {
+  export AWS_PROFILE=$1
+}
+
+sc () {
+  saml2aws console --skip-prompt --mfa PUSH --exec-profile $1
+}
+
+se () {
+  saml2aws exec --exec-profile $1 -- zsh
+}
+
+login () {
+  saml2aws login --skip-prompt --force
+}
+
+temp () {
+  sudo powermetrics --samplers smc | grep -i "$1 die temperature"
+}
+
+tfe () {
+  python "$HOME/code/scripts/tfe"
+}
+
+# zsh plugins
+
+plugins=(
+  zsh-256color
+)
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffffff,bg=underline"
+
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+
+complete -C '/Users/starlight.romero/.pyenv/shims/aws_completer' aws
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /Users/starlight.romero/.zsh/plugins/f-sy-h/F-Sy-H.plugin.zsh
+
+[[ -s "/Users/starlight.romero/.gvm/scripts/gvm" ]] && source "/Users/starlight.romero/.gvm/scripts/gvm"
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
