@@ -1,0 +1,5 @@
+theme = matrix-custom
+custom-shader = ghostty-shaders/matrix-hallway.glsl
+custom-shader = ghostty-shaders/matrix-rain.glsl
+custom-shader-animation = true
+command = /bin/zsh -c 'source ~/.zshrc; kiro-cli --v3; exec /bin/zsh -li'
